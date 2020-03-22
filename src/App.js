@@ -7,6 +7,7 @@ function App({route}) {
       <h1>This Header</h1>
       {renderRoutes(route.routes)}
     </div>
+
   );
 }
 
