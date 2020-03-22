@@ -1,6 +1,6 @@
 import App from './App';
 import Home from './Page/home';
-import Contact, {loadData} from './Page/Contact';
+import Contact from './Page/Contact';
 
 // export default (props)=> {
 //     return (
@@ -14,8 +14,8 @@ import Contact, {loadData} from './Page/Contact';
 
 export default [
   {
+    ...App,
     path: '/',
-    component: App,
     exact: true,
   },
   {
@@ -23,8 +23,7 @@ export default [
     component: Home,
   },
   {
-    loadData,
+    ...Contact,
     path: '/Contact',
-    component: Contact,
   },
 ];

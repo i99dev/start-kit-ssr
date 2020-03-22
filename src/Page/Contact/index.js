@@ -12,12 +12,13 @@ class Contact extends Component {
   constructor() {
     super();
   }
+
   componentDidMount() {
     this.props.FatchComment();
   }
 
   renderList() {
-    return this.props.comment.slice(0, 2).map((e)=>{
+    return this.props.comment.slice(0, 2).map((e) => {
       return (
         <li key={e.id}>
           {e.body}
@@ -34,11 +35,15 @@ class Contact extends Component {
     );
   }
 }
-export function loadData(store) {
+
+ function loadData(store) {
   return store.dispatch(FatchComment());
 }
 
 
-export default connect(
-    mapStateToProps, {FatchComment},
-)(Contact);
+export default {
+  loadData,
+  component: connect(
+      mapStateToProps, {FatchComment},
+  )(Contact),
+};
