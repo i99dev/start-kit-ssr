@@ -2,14 +2,22 @@ import 'babel-polyfill'
 import express from 'express';
 import React from 'react'
 import {renderToString} from 'react-dom/server'
-import App from '../src/App';
+import {renderRoutes} from "react-router-config";
+import {StaticRouter} from 'react-router-dom';
+import Routers from '../src/Routers';
 
 
 const app = express();
 app.use(express.static('public'));
 app.get('*', (req, res) => {
 
-    const Content = renderToString(<App/>);
+    const Content = renderToString(
+        <StaticRouter location={req.path} context={{}}>
+            <div>
+                {renderRoutes(Routers)}
+            </div>
+        </StaticRouter>
+    );
     const html = `
     <html>
     <head>
