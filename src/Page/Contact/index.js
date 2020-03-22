@@ -16,15 +16,28 @@ class Contact extends Component {
     this.props.FatchComment();
   }
 
+  renderList() {
+    return this.props.comment.slice(0, 2).map((e)=>{
+      return (
+        <li key={e.id}>
+          {e.body}
+        </li>
+      );
+    });
+  }
+
   render() {
-    console.log(this.props.comment)
     return (
       <div>
-                THis Page
+        {this.renderList()}
       </div>
     );
   }
 }
+export function loadData(store) {
+  return store.dispatch(FatchComment());
+}
+
 
 export default connect(
     mapStateToProps, {FatchComment},

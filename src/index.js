@@ -12,7 +12,7 @@ import Reducers from './redux/reducers';
 const Store = createStore(Reducers, {}, applyMiddleware(thunk));
 
 
-ReactDOM.hydrate(
+ReactDOM.render(
     <Provider store={Store}>
       <BrowserRouter>
         <div>{renderRoutes(Routers)}</div>
