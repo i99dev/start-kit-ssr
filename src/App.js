@@ -2,16 +2,16 @@ import React from 'react';
 
 
 function App() {
-    return (
-        <div>
+  return (
+    <div>
             This Page React my name
-            <button onClick={() => {
-                console.log('print my button')
-            }}>
+      <button onClick={() => {
+        console.log('print my button');
+      }}>
                 Test Press
-            </button>
-        </div>
-    );
+      </button>
+    </div>
+  );
 }
 
 export default App;
