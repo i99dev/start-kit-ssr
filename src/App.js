@@ -1,15 +1,11 @@
 import React from 'react';
+import {renderRoutes} from 'react-router-config';
 
-
-function App() {
+function App({route}) {
   return (
     <div>
-            This Page React my name
-      <button onClick={() => {
-        console.log('print my button');
-      }}>
-                Test Press
-      </button>
+      <h1>This Header</h1>
+      {renderRoutes(route.routes)}
     </div>
   );
 }

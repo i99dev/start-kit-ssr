@@ -15,15 +15,16 @@ import Contact from './Page/Contact';
 export default [
   {
     ...App,
-    path: '/',
-    exact: true,
-  },
-  {
-    path: '/home',
-    component: Home,
-  },
-  {
-    ...Contact,
-    path: '/Contact',
+    routes: [
+      {
+        ...Home,
+        path: '/',
+        exact: true,
+      },
+      {
+        ...Contact,
+        path: '/Contact',
+      },
+    ],
   },
 ];
