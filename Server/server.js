@@ -10,7 +10,7 @@ import proxy from 'express-http-proxy';
 const app = express();
 // TODO:add APi Server to our App
 
-app.use('/api', proxy('https://jsonplaceholder.typicode.com/'));
+app.use('/api', proxy('http://localhost:3000/'));
 app.use(express.static('public'));
 app.get('*', (req, res) => {
   const Store = CreateStore(req);

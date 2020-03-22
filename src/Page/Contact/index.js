@@ -20,8 +20,8 @@ class Contact extends Component {
   renderList() {
     return this.props.comment.slice(0, 2).map((e) => {
       return (
-        <li key={e.id}>
-          {e.body}
+        <li key={e._id}>
+          {e.description}
         </li>
       );
     });
