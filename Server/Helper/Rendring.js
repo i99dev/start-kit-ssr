@@ -7,9 +7,8 @@ import {renderRoutes} from 'react-router-config';
 import serialize from 'serialize-javascript';
 
 
-export default (req, Store)=>{
+export default (req, Store) => {
   const Content = renderToString(
-
       // <Provider store={Store}>
       //     <StaticRouter location={req.path} context={{}}>
       //         <Routers/>
@@ -22,8 +21,6 @@ export default (req, Store)=>{
           </div>
         </StaticRouter>
       </Provider>,
-
-
   );
 
   return (
@@ -33,6 +30,8 @@ export default (req, Store)=>{
             <title>
                 My App
             </title>
+            <link rel="stylesheet" type="text/css" href="./Styles/tailwind.css">
+
         </head>
         <body>
         <div id="root">${Content}</div>

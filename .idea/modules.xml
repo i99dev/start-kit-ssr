@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../back-end-server/.idea/Server.iml" filepath="$PROJECT_DIR$/../back-end-server/.idea/Server.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/start-kit-ssr.iml" filepath="$PROJECT_DIR$/.idea/start-kit-ssr.iml" />
     </modules>
   </component>
